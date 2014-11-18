@@ -1,5 +1,8 @@
 package chap06
 
+/**
+ * 整数の二分木
+ */
 abstract class IntSet {
   def incl(x: Int): IntSet
   def contains(x: Int): Boolean
