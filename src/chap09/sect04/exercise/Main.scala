@@ -8,6 +8,14 @@ object Main {
     println(squareList2(list))
 
     println(list.map(x => x * x))
+
+    println(
+      mapFun(list, (x: Int) => x * 2)
+    )
+
+    println(
+      lengthFun(list)
+    )
   }
 
   /**
@@ -23,4 +31,12 @@ object Main {
    */
   def squareList2(xs: List[Int]): List[Int] = xs.map(x => x * x)
 
+  /**
+   * 演習 9.4.3 書かれていない式を埋めて、次の基本的なリスト操作定義を畳み込み操作として完成しなさい。
+   */
+  def mapFun[A, B](xs: List[A], f: A => B): List[B] =
+    (xs :\ List[B]()){(x, bs) => f(x) :: bs}
+
+  def lengthFun[A](xs: List[A]): Int =
+    (0 /: xs){(n, x) => n + 1}
 }
