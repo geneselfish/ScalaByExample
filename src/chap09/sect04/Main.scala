@@ -17,5 +17,5 @@ object Main {
   /**
    * nが素数であるか否か
    */
-  def isPrime(n: Int) = List.range(2, n) forall (x => n % x != 0)
+  def isPrime(n: Int) = List.range(2, n) forall (n % _ != 0)
 }
