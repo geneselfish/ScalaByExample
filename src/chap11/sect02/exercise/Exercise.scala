@@ -7,7 +7,7 @@ object Exercise {
     repeatLoop {
       println("i = %d".format(i))
       i  += 1
-    }(i < 2)
+    }({println("※i = %d".format(i)); i < 2})
   }
 
   /**
