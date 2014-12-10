@@ -21,7 +21,7 @@ object Main {
    * を求めることを考えます。インデックスはイテレータとして返されるものとします。
    */
   def indexListByLimit(xs: Array[Double], limit: Double): Iterator[Int] = {
-    tabulate(xs.length)(i => xs(i))//ArrayからIteratorに変換
+    tabulate(xs.length)(i => xs(i))//ArrayからIteratorに変換。fromArrayメソッドは廃止された？
     .zip(from(0))
 //    .filter(t => t._1 > limit)
 //    .filter(_._1 > limit)
