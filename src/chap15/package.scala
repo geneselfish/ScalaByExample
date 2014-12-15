@@ -14,4 +14,14 @@ package object chap15 {
     def unit: Int = 0
   }
 
+  /**
+   * 暗黙の型変換
+   */
+  implicit def int2orderd(x: Int): Ordered[Int] = new Ordered[Int] {
+    def compare(y: Int): Int =
+      if (x > y) 1
+      else if (x < y) -1
+      else 0
+  }
+
 }
